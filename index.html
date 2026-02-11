@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💌 Para Alejandra - San Valentín 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat:wght@400;600&family=Great+Vibes&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- PÁGINA 0: INTRO ANIMADA - ÁRBOL DEL AMOR -->
+<section class="page active" id="page0">
+  <div class="intro-container">
+    <!-- Cielo y suelo -->
+    <div class="sky"></div>
+    <div class="ground"></div>
+    
+    <!-- Semilla cayendo -->
+    <div class="seed-container" id="seedContainer">
+      <div class="seed" id="seed">🌰</div>
+    </div>
+    
+    <!-- Árbol creciendo -->
+    <div class="tree-container" id="treeContainer">
+      <div class="tree">
+        <!-- Tronco -->
+        <div class="trunk"></div>
+        
+        <!-- Ramas y hojas de corazones -->
+        <div class="branches">
+          <div class="branch branch-1">
+            <div class="heart-leaf hl-1">💜</div>
+            <div class="heart-leaf hl-2">💕</div>
+            <div class="heart-leaf hl-3">💜</div>
+          </div>
+          <div class="branch branch-2">
+            <div class="heart-leaf hl-4">💜</div>
+            <div class="heart-leaf hl-5">💕</div>
+            <div class="heart-leaf hl-6">💜</div>
+          </div>
+          <div class="branch branch-3">
+            <div class="heart-leaf hl-7">💕</div>
+            <div class="heart-leaf hl-8">💜</div>
+            <div class="heart-leaf hl-9">💕</div>
+          </div>
+          <div class="branch branch-center">
+            <div class="heart-leaf hl-10">💜</div>
+            <div class="heart-leaf hl-11">💕</div>
+            <div class="heart-leaf hl-12">💜</div>
+            <div class="heart-leaf hl-13">💕</div>
+            <div class="heart-leaf hl-14">💜</div>
+          </div>
+        </div>
+        
+        <!-- Copa del árbol (corazones adicionales) -->
+        <div class="tree-crown">
+          <span class="crown-heart ch-1">💜</span>
+          <span class="crown-heart ch-2">💕</span>
+          <span class="crown-heart ch-3">💜</span>
+          <span class="crown-heart ch-4">💕</span>
+          <span class="crown-heart ch-5">💜</span>
+          <span class="crown-heart ch-6">💕</span>
+          <span class="crown-heart ch-7">💜</span>
+          <span class="crown-heart ch-8">💕</span>
+          <span class="crown-heart ch-9">💜</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mensaje y contador -->
+    <div class="love-message" id="loveMessage">
+      <h1 class="love-title">Mi amor por ti comenzó hace...</h1>
+      
+      <div class="love-counter">
+        <div class="counter-item">
+          <span class="counter-number" id="days">0</span>
+          <span class="counter-label">días</span>
+        </div>
+        <div class="counter-separator">:</div>
+        <div class="counter-item">
+          <span class="counter-number" id="hours">0</span>
+          <span class="counter-label">horas</span>
+        </div>
+        <div class="counter-separator">:</div>
+        <div class="counter-item">
+          <span class="counter-number" id="minutes">0</span>
+          <span class="counter-label">minutos</span>
+        </div>
+        <div class="counter-separator">:</div>
+        <div class="counter-item">
+          <span class="counter-number" id="seconds">0</span>
+          <span class="counter-label">segundos</span>
+        </div>
+      </div>
+      
+      <p class="love-subtitle">...y sigue creciendo cada día 💜</p>
+      
+      <button class="continue-btn" onclick="nextPage()">
+        Continuar → 
+      </button>
+    </div>
+  </div>
+  
+  <!-- Partículas de brillo -->
+  <div class="sparkle-particles" id="sparkleParticles"></div>
+</section>
+
+<!-- PÁGINA 1: CARTA -->
+<section class="page" id="page1">
+  <div class="letter-container">
+    <div class="letter">
+      <div class="letter-header">
+        <div class="stamp">💌</div>
+        <div class="date">14 de Febrero, 2026</div>
+      </div>
+      
+      <div class="letter-body">
+        <h1 class="letter-title">Te tengo una sorpresa...</h1>
+        
+        <p class="letter-text">
+          Para descubrirla, da click sobre el corazón
+        </p>
+        
+        <div class="heart-container">
+          <div class="heart" onclick="nextPage()">💜</div>
+          <div class="heart-glow"></div>
+        </div>
+        
+        <div class="letter-signature">
+          <p class="from">De: <span class="cursive-name">Antony</span></p>
+          <p class="to">Para: <span class="cursive-name">Alejandra</span></p>
+        </div>
+      </div>
+      
+      <div class="letter-seal">�</div>
+    </div>
+  </div>
+  <div class="floating-hearts" id="floatingHearts1"></div>
+</section>
+
+<!-- PÁGINA 2: VOLANTE -->
+<section class="page" id="page2">
+  <div class="flyer-container">
+    <div class="flyer">
+      <div class="flyer-ribbon">✨ EDICIÓN ESPECIAL ✨</div>
+      
+      <div class="flyer-header">
+        <h1 class="flyer-title">Will you be my<br><span>Valentine?</span></h1>
+      </div>
+      
+      <div class="flyer-badge">
+        <span>DISTRIBUCIÓN EXCLUSIVA</span>
+        <p>Para la persona más especial</p>
+        <h2 class="special-name">Alejandra</h2>
+      </div>
+      
+      <div class="flyer-content">
+        <div class="flyer-image">
+          <div class="couple-illustration">
+            <span class="heart-big">�</span>
+            <div class="sparkles">✨�✨</div>
+          </div>
+        </div>
+        
+        <p class="flyer-text">
+          "Te amo mucho mi princesa"
+        </p>
+      </div>
+      
+      <!-- CUPÓN RECORTABLE -->
+      <div class="coupon-section">
+        <p class="coupon-instruction">✂️ Recorta este cupón y úsalo cuando quieras ✂️</p>
+        <div class="coupon">
+          <div class="coupon-left">
+            <span class="coupon-icon">🎫</span>
+          </div>
+          <div class="coupon-content">
+            <h3>CUPÓN DE CITA</h3>
+            <p class="coupon-text">Válido por UNA (1) cita romántica</p>
+            <p class="coupon-details">📍 Lugar: A elección de Alejandra<br>
+            🕐 Hora: Cuando tu corazón lo desee<br>
+            💝 Incluye: Amor infinito + sorpresas</p>
+            <p class="coupon-valid">Sin fecha de expiración ♾️</p>
+          </div>
+          <div class="coupon-right">
+            <span class="coupon-code">LOVE2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="navigation-buttons">
+    <button class="nav-btn prev" onclick="prevPage()">← Anterior</button>
+    <button class="nav-btn next" onclick="nextPage()">Siguiente →</button>
+  </div>
+</section>
+
+<!-- PÁGINA 3: 6 RAZONES -->
+<section class="page" id="page3">
+  <div class="reasons-container">
+    <h1 class="reasons-title">6 Razones por las que eres<br><span>mi decisión perfecta</span></h1>
+    
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <div class="reason-number">1</div>
+        <div class="reason-content">
+          <h3>Tu sonrisa</h3>
+          <p>Me hace sentir muy feliz y en paz, me gusta verte sonreir amor, hazlo siempre que pueda</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-number">2</div>
+        <div class="reason-content">
+          <h3>Tu forma de ser</h3>
+          <p>Eres única, especial y haces que cada momento sea inolvidable</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-number">3</div>
+        <div class="reason-content">
+          <h3>Tu risa</h3>
+          <p>Es muy contagiosa y te hace ver mucho mas bonita</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-number">4</div>
+        <div class="reason-content">
+          <h3>Tu corazón</h3>
+          <p>Tu forma de ser me hace quererte cada día más y mejorar como persona</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-number">5</div>
+        <div class="reason-content">
+          <h3>Tu mirada</h3>
+          <p>Me pone muy nervioso pero me hace sentir super bien</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-number">6</div>
+        <div class="reason-content">
+          <h3>Simplemente tú</h3>
+          <p>Porque contigo todo tiene sentido y no imagino mi vida sin ti</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="study-section">
+      <div class="study-badge">📊 DATOS CIENTÍFICOS</div>
+      <h2>Señales de que debes decir SÍ:</h2>
+      <div class="study-content">
+        <div class="study-item">
+          <span class="study-icon">🔬</span>
+          <p><strong>Estudios recientes han demostrado</strong> que el 100% de las Alejandras que dicen "sí" experimentan niveles extraordinarios de felicidad</p>
+        </div>
+        <div class="study-item">
+          <span class="study-icon">📈</span>
+          <p><strong>Investigaciones confirman</strong> que las citas con Antony aumentan la producción de sonrisas en un 500%</p>
+        </div>
+        <div class="study-item">
+          <span class="study-icon">❤️</span>
+          <p><strong>Expertos en amor certifican</strong> que esta es una oportunidad única e irrepetible</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="navigation-buttons">
+    <button class="nav-btn prev" onclick="prevPage()">← Anterior</button>
+    <button class="nav-btn next" onclick="nextPage()">La Gran Pregunta →</button>
+  </div>
+</section>
+
+<!-- PÁGINA 4: LA GRAN PREGUNTA -->
+<section class="page" id="page4">
+  <div class="final-container">
+    <h1 class="final-title">� La Gran Pregunta 💜</h1>
+    
+    <div class="question-box">
+      <h2 class="big-question">Alejandra, ¿quieres ser mi<br><span>San Valentín</span>?</h2>
+      
+      <div class="answer-buttons-container">
+        <div class="answer-buttons">
+          <button class="answer-btn yes-btn" onclick="sayYes()">
+            � ¡Sí, acepto! 💜
+          </button>
+          <button class="answer-btn no-btn" id="noBtn" onmouseover="moveButton()" ontouchstart="moveButton()">
+            No estoy segura
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sección de celebración (oculta inicialmente) -->
+    <div class="celebration hidden" id="celebration">
+      <div class="confetti-container" id="confetti"></div>
+      <div class="celebration-content">
+        <h2 class="celebration-title">🎉 ¡SÍÍÍÍ! 🎉</h2>
+        <p class="celebration-text">¡Sabía que dirías que sí! Este será el mejor San Valentín de nuestras vidas �</p>
+        
+        <!-- ACTA COMPROBATORIA -->
+        <div class="certificate">
+          <div class="certificate-border">
+            <div class="certificate-header">
+              <span class="certificate-icon">📜</span>
+              <h3>ACTA OFICIAL DE SAN VALENTÍN</h3>
+              <p class="certificate-subtitle">Documento con validez sentimental</p>
+            </div>
+            
+            <div class="certificate-body">
+              <p>Por medio del presente documento, se hace constar que:</p>
+              <p class="certificate-names">
+                <span class="name-antony">Antony</span> 
+                <span class="heart-union">💜</span> 
+                <span class="name-alejandra">Alejandra</span>
+              </p>
+              <p>Han acordado celebrar juntos el día de San Valentín 2026,<br>
+              comprometiéndose a compartir amor, risas y momentos inolvidables.</p>
+              
+              <div class="signature-section">
+                <div class="signature-box">
+                  <p>Firma de Alejandra:</p>
+                  <canvas id="signatureCanvas" width="300" height="100"></canvas>
+                  <button class="clear-btn" onclick="clearSignature()">Borrar firma</button>
+                </div>
+              </div>
+              
+              <div class="certificate-footer">
+                <p>Fecha: 14 de Febrero de 2026</p>
+                <p class="certificate-seal">💜 Sellado con amor 💜</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <button class="save-btn" onclick="saveCertificate()">📸 Guardar recuerdo</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="navigation-buttons" id="nav4">
+    <button class="nav-btn prev" onclick="prevPage()">← Anterior</button>
+  </div>
+</section>
+
+<!-- Elementos de fondo animados -->
+<div class="background-hearts" id="bgHearts"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
